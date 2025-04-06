@@ -12,6 +12,8 @@ header {
     background-image: url("./imgs/background.jpg");
     background-size: cover;
     color: white;
+    margin-bottom: 5vh;
+    margin-top: 2vh;
 }
 .header_content {
     background-color: rgba(0, 0, 0, 0.4);
@@ -34,9 +36,6 @@ h1 {
     font-style: normal;
 }
 
-.header_content {
-    backdrop-filter: opacity(100%);
-}
 body {
     margin: 0;
     padding: 0;
