@@ -4,5 +4,7 @@ header {
     align-items: center;
     justify-content: center;
     height: 80vh;
-
+}
+#map {
+    height: 60vh;
 }

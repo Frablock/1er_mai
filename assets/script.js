@@ -1,16 +1,17 @@
-var countDownDate = new Date("2025-05-01").getTime();
+// Countdown
+let countDownDate = new Date("2025-05-01").getTime();
 
-var x = setInterval(function () {
-    var now = new Date().getTime();
+let x = setInterval(function () {
+    let now = new Date().getTime();
 
-    var distance = countDownDate - now;
+    let distance = countDownDate - now;
 
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor(
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor(
         (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
     );
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     document.getElementById("date_before").innerHTML =
         days +
@@ -29,3 +30,11 @@ var x = setInterval(function () {
             "NOUS SOMMES LE PREMIER MAI";
     }
 }, 1000);
+
+// Carte
+let map = L.map("map").setView([48.873680, 2.360481], 19);
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution:
+        '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+}).addTo(map);
