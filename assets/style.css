@@ -1,5 +1,54 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fira+Code:wght@300..700&display=swap");
 
+/* Start Custom Fonts CSS */@font-face {
+    font-family: 'Obviously Narrow';
+    font-style: normal;
+    font-weight: 700;
+    font-display: auto;
+    src: url('fonts/ObviouslyNarrow-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Obviously Narrow';
+    font-style: normal;
+    font-weight: 900;
+    font-display: auto;
+    src: url('fonts/ObviouslyNarrow-Black.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Obviously Narrow';
+    font-style: normal;
+    font-weight: 400;
+    font-display: auto;
+    src: url('fonts/ObviouslyNarrow-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Obviously Narrow';
+    font-style: normal;
+    font-weight: 500;
+    font-display: auto;
+    src: url('fonts/ObviouslyNarrow-Medium.ttf') format('truetype');
+}
+/* End Custom Fonts CSS */
+
+nav {
+    height: 10vh;
+    background-color: #f9c900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+nav a {
+    font-family: Obviously Narrow;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+}
+nav a:hover {
+    color:#7b13d6;
+}
 footer,
 header {
     text-align: center;
@@ -9,14 +58,12 @@ header {
 }
 header {
     height: 80vh;
-    background-image: url("./imgs/background.jpg");
+    background-color: #ed3b3b;
     background-size: cover;
     color: white;
     margin-bottom: 5vh;
-    margin-top: 2vh;
 }
 .header_content {
-    background-color: rgba(0, 0, 0, 0.6);
     height: 100%;
     width: 100%;
     text-align: center;
@@ -31,16 +78,21 @@ header {
 
 h1 {
     font-size: 50px;
-    font-family: "Archivo Black", sans-serif;
-    font-weight: 400;
+    font-family: "Obviously Narrow";
+    font-weight: 700;
     font-style: normal;
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Obviously Narrow;
+    font-weight: 400;
+    font-style: normal;
+}
+#maps {
+    padding: 10vh;
 }
 #map {
-    height: 60vh;
+    height: 80vh;
 }
