@@ -32,7 +32,8 @@ let x = setInterval(function () {
 }, 1000);
 
 // Carte
-let map = L.map("map").setView([48.873680, 2.360481], 19);
+//let map = L.map("map").setView([48.873680, 2.360481], 19); //focus sur le milieu de Paris
+let map = L.map("map").setView([46.5, 2.360481], 5); //focus sur la France entière
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
     attribution:
