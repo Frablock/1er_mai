@@ -1,4 +1,7 @@
+// Liste de manifs
 const MANIFS = [
+    // Liste test
+    // TODO: Remplacer par la vraie liste de manifs
     {
          ville : "Tours",
          heure : "10h00",
