@@ -40,9 +40,9 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 // Image drapeau
-const pin_icon = L.icon({iconUrl:'./assets/imgs/pin.png',
-    iconSize: [32, 32],
-    iconAnchor: [16, 32],
+const pin_icon = L.icon({iconUrl:'./assets/imgs/pin.webp',
+    iconSize: [37.5, 32],
+    iconAnchor: [14.5, 24.5],
     popupAnchor: [0, -32]
 });
 
