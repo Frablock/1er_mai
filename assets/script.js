@@ -39,3 +39,21 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution:
         '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 }).addTo(map);
+
+// let lat = 46.5;
+// let lng = 2.360481;
+
+function ajoute_pin(manif, _)
+{
+    const pin_icon = L.icon({iconUrl:'./assets/imgs/pin.png',
+        iconSize: [32, 32],
+        iconAnchor: [16, 32],
+        popupAnchor: [0, -32]
+    });
+
+    const message = `Ville: ${manif.ville}<br>Heure: ${manif.heure}<br>Lieu: ${manif.lieu}`;
+
+    L.marker([manif.lat, manif.lng], { icon: pin_icon }).addTo(map).bindPopup(message);
+}
+
+MANIFS.forEach(ajoute_pin)
