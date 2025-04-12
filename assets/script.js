@@ -32,10 +32,30 @@ let x = setInterval(function () {
 }, 1000);
 
 // Carte
-//let map = L.map("map").setView([48.873680, 2.360481], 19); //focus sur le milieu de Paris
 let map = L.map("map").setView([46.5, 2.360481], 5); //focus sur la France entière
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
     attribution:
         '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 }).addTo(map);
+
+// Image drapeau
+const pin_icon = L.icon({iconUrl:'./assets/imgs/pin.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    popupAnchor: [0, -32]
+});
+
+
+// Fonction de chargement des données
+function ajoute_manif(manif, _)
+{
+    // Message à montrer
+    const popup = `Ville: ${manif.ville}<br>Heure: ${manif.heure}<br>Lieu: ${manif.lieu}`;
+
+    // Ajout à la carte
+    L.marker([manif.lat, manif.lng], { icon: pin_icon }).addTo(map).bindPopup(popup);
+}
+
+// Itération sur la liste de manifs
+MANIFS.forEach(ajoute_manif)
