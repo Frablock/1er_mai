@@ -16,7 +16,7 @@
     </head>
     <body>
         <nav>
-            <a href="#maps">Carte des manifestations</a>
+            <a href="#" onclick="ouvrir_carte()">Carte des manifestations</a>
             <a href="#links">Liens</a>
             <a href="https://action-populaire.fr">Action Populaire</a>
         </nav>
@@ -25,16 +25,18 @@
                 <div>
                     <h1 id="date_before">1er mai</h1>
                     <div>
-                        <a href="#maps"
-                            >Trouver une manifestation près de chez moi</a
-                        >
+                        <a href="#" onclick="ouvrir_carte()">
+                            Trouver une manifestation près de chez moi</a>
                     </div>
                 </div>
             </div>
         </header>
-        <section id="maps">
+        <div id="popup">
+            <img id="map_x" onclick="fermer_carte()"
+                src="https://www.svgrepo.com/show/12848/x-symbol.svg"
+                style="padding: 0; width:32px; height: 32px;">
             <div id="map"></div>
-        </section>
+        </div>
         <section id="links"></section>
         <footer>Fait avec ❤️ par des militants La Barricade</footer>
         <script src="./assets/manifs.js"></script>

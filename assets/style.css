@@ -90,9 +90,47 @@ body {
     font-weight: 400;
     font-style: normal;
 }
-#maps {
-    padding: 10vh;
-}
+
 #map {
-    height: 80vh;
+    height: 100vh;
+    z-index: 0;
+}
+
+#popup {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    display: none;
+    animation-duration: 2s;
+}
+
+#map_x {
+    position: fixed;
+    right: 16px;
+    top: 16px;
+    text-align: right;
+    z-index: 1;
+}
+
+@keyframes popup_in {
+    from {
+        scale: 0%;
+    }
+
+    50% {
+        scale: 100%;
+    }
+}
+
+@keyframes popup_out {
+    50% {
+        scale: 0%;
+    }
+
+    to {
+        scale: 0%;
+    }
 }

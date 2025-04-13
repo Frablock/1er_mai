@@ -31,6 +31,7 @@ let x = setInterval(function () {
     }
 }, 1000);
 
+
 // Carte
 let map = L.map("map").setView([46.5, 2.360481], 5); //focus sur la France entière
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -45,6 +46,30 @@ const pin_icon = L.icon({iconUrl:'./assets/imgs/pin.webp',
     iconAnchor: [14.5, 24.5],
     popupAnchor: [0, -32]
 });
+
+
+// Ouverture de la carte
+function ouvrir_carte()
+{
+    let popup = document.getElementById("popup");
+    popup.style.display = "block";
+    popup.style.animationName = "popup_in";
+    map.invalidateSize(); //sinon la carte n'est pas centrée au bon endroit
+}
+
+// Fermeture de la carte
+function fermer_carte()
+{
+    let popup = document.getElementById("popup");
+    popup.style.animationName = "popup_out";
+
+    //pour éviter que la carte réapparaisse
+    setTimeout(() => {
+        // sans le if, si on clique assez vite, le popup s'ouvre et disparaît
+        if(popup.style.animationName == "popup_out")
+            popup.style.display = "none";
+    }, 1000);
+}
 
 
 // Fonction de chargement des données
